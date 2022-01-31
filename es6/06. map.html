@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. map</title>
+</head>
+
+<script>
+    //jsx -> for, foreach 등 반복문 사용 불가
+    // map -> 반복문
+    /*
+        객체.map ( (현재값, 인덱스) => {
+            return(값)
+        })
+    */
+
+   const arr1 = [10,20,30,40,50]
+   arr1.map ( (item, idx) => {
+       return(console.log(idx, item))
+   })
+
+   console.log(' ========== ')
+
+   //결과가 한줄일 때
+   arr1.map ( (item, idx) => console.log(idx, item))
+
+   console.log(' ========== ')
+
+   const data = [
+       {id: 1, name: '깅호동1'},
+       {id: 2, name: '깅호동2'},
+       {id: 3, name: '깅호동3'},
+       {id: 4, name: '깅호동4'},
+       {id: 5, name: '깅호동5'},
+   ]
+
+   data.map ( (item, index) => {
+       return (console.log(item.id, item.name))
+   })
+
+   console.log(' ========== ')
+
+   data.map ( (item, index) => console.log(item.id, item.name))
+   
+</script>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. 스프레드연산자</title>
+</head>
+
+<script>
+    const arr = ['고양이', '사자', '호랑이']
+    const arr1 = arr.concat()
+    const arr2 = arr.concat('뱀', '도마뱀', '악어')
+
+    const arr3 = [...arr]
+    const arr4 = [...arr, '붕어', '금붕어', '기린']
+
+    console.log(arr)
+    console.log(arr1)
+    console.log(arr2)
+
+    console.log(' ========== ')
+
+    console.log(arr3)
+    console.log(arr4)
+
+    console.log(' ========== ')
+
+    const man = {
+        name:'홍길동' , age: 20, addr:'서울'
+    }
+    //이름 갱신, 변경, 수정
+
+    const man1 = {
+        ...man,
+        name : '김다미'
+    }
+    console.log(man1)
+
+    const man2 = {
+        ...man,
+        name : '최우식',
+        age: 25,
+        addr: '제주'
+    }
+    console.log(man2)
+
+</script>
+
+<body>
+    
+</body>
+</html>

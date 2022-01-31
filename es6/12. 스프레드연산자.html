@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. 스프레드연산자</title>
+</head>
+
+<script>
+    const data = [
+        {id:1, name:'강호동'},
+        {id:2, name:'김다미'},
+        {id:3, name:'최우식'},
+        {id:4, name:'송혜교'},
+        {id:5, name:'전지현'},
+    ]
+
+    const data1 = data.concat()
+    const data2 = data.concat({id: 6, name: '유재석'})
+    const data3 = [...data]
+    const data4 = [...data, {id: 7, name: '강호동'}]
+
+    console.log(data1)
+    console.log(data2)
+
+    console.log(' ========== ')
+
+    console.log(data3)
+    console.log(data4)
+
+    console.log(' ========== ')
+
+    const data5 = data.map( (item, index) => {
+        if(item.id === 4){
+            //갱신
+            return {
+                ...item,
+                name: '송중기'
+            }
+        } else {
+            return item
+        }
+    })
+
+    console.log(data5)
+
+    const data6 = data.map( (item, index) => item.id === 5 ? {
+        ...item, name: '강호동'
+    } : item)
+
+    console.log(data6)
+</script>
+
+<body>
+    
+</body>
+</html>
