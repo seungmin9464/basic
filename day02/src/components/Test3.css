@@ -1,0 +1,17 @@
+.box{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box article{
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
